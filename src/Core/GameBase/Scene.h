@@ -8,16 +8,13 @@ class Scene
 {
 private:
     std::list<GameObjectBase*> _objs;
+    const char* _sceneName;
 
 public:
-    Scene();
+    Scene(const char* sceneName);
     ~Scene();
 
     void Render();
-    void AddGameObject(GameObjectBase &obj);
-    void RemoveGameObject(GameObjectBase &obj);
-
-    void Awake();
-    void Start();
-    void Tick();
+    void AddGameObject(GameObjectBase* obj);
+    void RemoveGameObject(GameObjectBase* obj);
 };

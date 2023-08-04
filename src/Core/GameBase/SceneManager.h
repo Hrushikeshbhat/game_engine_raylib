@@ -7,8 +7,8 @@
 class SceneManager
 {
 private:
-    std::list<Scene> _scenes;
-    Scene _currentScene;
+    std::list<Scene*> _scenes;
+    Scene* _currentScene;
 
     int _currentSceneIndex = 0;
 
@@ -20,10 +20,9 @@ public:
     ~SceneManager();
 
     int GetCurrentSceneIndex() { return _currentSceneIndex; }
-    Scene GetCurrentScene() { return _currentScene; }
+    Scene* GetCurrentScene() { return _currentScene; }
 
-    void AddScene();
-    void NextScene();
+    void AddScene(Scene* scene);
     void StartSceneAtIndex(int sceneIndex);
 
 private:

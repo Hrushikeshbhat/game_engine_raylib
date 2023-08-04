@@ -28,7 +28,7 @@ void GameProgram::StartGameLoop()
 
         //Draw objects here
 
-        
+        _sceneManager.GetCurrentScene()->Render();
         
         //End Drawing Objects
         
