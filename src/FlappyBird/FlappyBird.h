@@ -4,6 +4,6 @@
 class FlappyBird : private GameProgram
 {
 public:
-    FlappyBird(int* width, int* heigth, const char* title);
+    FlappyBird(int* width, int* height, const char* title);
     ~FlappyBird();
 };

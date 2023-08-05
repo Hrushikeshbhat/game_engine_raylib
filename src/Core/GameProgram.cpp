@@ -1,9 +1,9 @@
 #include "GameProgram.h"
 
-GameProgram::GameProgram(int* width, int* heigth, const char* title)
+GameProgram::GameProgram(int* width, int* height, const char* title)
 {
-    _width = width;
-    _heigth = heigth;
+    screenWidth = *width;
+    screenHeight = *height;
     _title = title;
 
     InitialiseWindow();
@@ -11,7 +11,7 @@ GameProgram::GameProgram(int* width, int* heigth, const char* title)
 
 void GameProgram::InitialiseWindow()
 {
-    InitWindow(*_width, *_heigth, _title);
+    InitWindow(screenWidth, screenHeight, _title);
     SetTargetFPS(60);
 
     StartGameLoop();
