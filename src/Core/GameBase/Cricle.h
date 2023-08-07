@@ -2,22 +2,27 @@
 #include "raymath.h"
 
 #include "GameObjectBase.h"
+#include "../Utils/Global.h"
 
-class Circle : public GameObjectBase
-{
-private:
+namespace HashEngine {
 
-public:
+    class Circle : public GameObjectBase
+    {
+    private:
 
-public:
-    Circle();
-    Circle(Vector2* translation);
-    Circle(Vector2* translation, float radius);
-    Circle(Vector2* translation, float rotation, float radius);
-    ~Circle();
+    public:
 
-    void Render();
+    public:
+        Circle(char* name);
+        Circle(char* name, Vector2* translation);
+        Circle(char* name, Vector2* translation, float radius);
+        Circle(char* name, Vector2* translation, float rotation, float radius);
+        ~Circle();
 
-private:
+        void Render();
 
-};
+    private:
+
+    };
+
+}

@@ -6,17 +6,28 @@
 #include "Utils/Global.h"
 #include "GameBase/SceneManager.h"
 
-class GameProgram
-{
-private:
-    const char* _title;
-    SceneManager _sceneManager;
+namespace HashEngine {
 
-public:
-    GameProgram(int* width, int* height, const char* title);
-    ~GameProgram();
+    class GameProgram
+    {
+    private:
+        const char* _title;
+        SceneManager _sceneManager;
 
-private:
-    void InitialiseWindow();
-    void StartGameLoop();
-};
+    public:
+        GameProgram(int* width, int* height, const char* title);
+        ~GameProgram();
+
+        void InitialiseWindow();
+
+        int GetCurrentSceneIndex();
+        Scene* GetCurrentScene();
+
+        void AddScene(Scene* scene);
+        void StartSceneAtIndex(int sceneIndex);
+
+    private:
+        void StartGameLoop();
+    };
+
+}

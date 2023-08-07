@@ -1,29 +1,33 @@
 #include "Cricle.h"
 
-Circle::Circle()
-{
-}
+namespace HashEngine {
 
-Circle::Circle(Vector2 *translation) : GameObjectBase(translation)
-{
-}
+    Circle::Circle(char* name) : GameObjectBase(name)
+    {
+    }
 
-Circle::Circle(Vector2 *translation, float radius) : GameObjectBase (translation, new Vector2{radius , radius})
-{
-}
+    Circle::Circle(char* name, Vector2 *translation) : GameObjectBase(name, translation)
+    {
+    }
 
-Circle::Circle(Vector2 *translation, float rotation, float radius) : GameObjectBase(translation, rotation, new Vector2{radius, radius})
-{
-}
+    Circle::Circle(char* name, Vector2 *translation, float radius) : GameObjectBase (name, translation, new Vector2{radius , radius})
+    {
+    }
 
-Circle::~Circle()
-{
-}
+    Circle::Circle(char* name, Vector2 *translation, float rotation, float radius) : GameObjectBase(name, translation, rotation, new Vector2{radius, radius})
+    {
+    }
 
-void Circle::Render()
-{
-    DrawCircle(screenWidth / 2 + GetTransform()->translation.x, 
-    screenHeight / 2 + GetTransform()->translation.y, 
-    GetTransform()->scale.x, 
-    RED);
+    Circle::~Circle()
+    {
+    }
+
+    void Circle::Render()
+    {
+        DrawCircle(screenWidth / 2 + ((int)GetTransform()->translation.x * 100), 
+        screenHeight / 2 - ((int)GetTransform()->translation.y * 100), 
+        GetTransform()->scale.x * 50, 
+        RED);
+    }
+    
 }

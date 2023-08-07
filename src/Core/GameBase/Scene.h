@@ -4,17 +4,21 @@
 
 #include "GameObjectBase.h"
 
-class Scene
-{
-private:
-    std::list<GameObjectBase*> _objs;
-    const char* _sceneName;
+namespace HashEngine {
 
-public:
-    Scene(const char* sceneName);
-    ~Scene();
+    class Scene
+    {
+    private:
+        std::list<GameObjectBase*> _objs;
+        const char* _sceneName;
 
-    void Render();
-    void AddGameObject(GameObjectBase* obj);
-    void RemoveGameObject(GameObjectBase* obj);
-};
+    public:
+        Scene(const char* sceneName);
+        ~Scene();
+
+        void Render();
+        void AddGameObject(GameObjectBase* obj);
+        void RemoveGameObject(GameObjectBase* obj);
+    };
+
+}

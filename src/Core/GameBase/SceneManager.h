@@ -4,27 +4,32 @@
 
 #include "Scene.h"
 
-class SceneManager
-{
-private:
-    std::list<Scene*> _scenes;
-    Scene* _currentScene;
+namespace HashEngine {
 
-    int _currentSceneIndex = 0;
+    class SceneManager
+    {
+    private:
+        std::list<Scene*> _scenes;
+        Scene* _currentScene;
 
-public:
-    //
-    
-public:
-    SceneManager();
-    ~SceneManager();
+        int _currentSceneIndex = 0;
 
-    int GetCurrentSceneIndex() { return _currentSceneIndex; }
-    Scene* GetCurrentScene() { return _currentScene; }
+    public:
+        //
+        
+    public:
+        SceneManager();
+        ~SceneManager();
 
-    void AddScene(Scene* scene);
-    void StartSceneAtIndex(int sceneIndex);
+        int GetCurrentSceneIndex() { return _currentSceneIndex; }
+        Scene* GetCurrentScene() { return _currentScene; }
 
-private:
-    //
-};
+        void InitialiseScenes();
+        void AddScene(Scene* scene);
+        void StartSceneAtIndex(int sceneIndex);
+
+    private:
+        //
+    };
+
+}

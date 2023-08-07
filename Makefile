@@ -8,7 +8,7 @@ EXT = .cpp
 SRCDIR = src
 OBJDIR = obj
 
-INCLUDE_DIRS = $(SRCDIR)/Core/GameBase $(SRCDIR)/Core/ $(SRCDIR)/FlappyBird
+INCLUDE_DIRS = $(SRCDIR)/Core/Utils $(SRCDIR)/Core/GameBase $(SRCDIR)/Core/ $(SRCDIR)/FlappyBird
 
 RAYLIB_VERSION     ?= 4.5.0
 RAYLIB_PATH        ?= lib/libraylib.a

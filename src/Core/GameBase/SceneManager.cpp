@@ -1,24 +1,32 @@
 #include "SceneManager.h"
 
-SceneManager::SceneManager()
-{
-    _currentScene = _scenes.front();
-}
+namespace HashEngine {
 
-SceneManager::~SceneManager()
-{
-}
+    SceneManager::SceneManager()
+    {
+    }
 
-void SceneManager::AddScene(Scene* scene)
-{
-    _scenes.push_front(scene);
-}
+    SceneManager::~SceneManager()
+    {
+    }
 
-void SceneManager::StartSceneAtIndex(int sceneIndex)
-{
-    auto itr = _scenes.begin();
+    void SceneManager::InitialiseScenes()
+    {
+        _currentScene = _scenes.front();
+    }
 
-    std::advance(itr, sceneIndex);
+    void SceneManager::AddScene(Scene *scene)
+    {
+        _scenes.push_front(scene);
+    }
 
-    _currentScene = *itr;
+    void SceneManager::StartSceneAtIndex(int sceneIndex)
+    {
+        auto itr = _scenes.begin();
+
+        std::advance(itr, sceneIndex);
+
+        _currentScene = *itr;
+    }
+
 }

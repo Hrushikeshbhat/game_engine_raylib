@@ -1,28 +1,34 @@
 #include "Scene.h"
 
-Scene::Scene(const char* sceneName)
-{
-    _sceneName = sceneName;
-}
+namespace HashEngine {
 
-Scene::~Scene()
-{
-}
-
-void Scene::Render()
-{
-    for(GameObjectBase* obj : _objs)
+    Scene::Scene(const char* sceneName)
     {
-        obj->Render();
+        _sceneName = sceneName;
+
+        std::cout << "Starting Scene: " << sceneName << std::endl;
     }
-}
 
-void Scene::AddGameObject(GameObjectBase* obj)
-{
-    _objs.push_front(obj);
-}
+    Scene::~Scene()
+    {
+    }
 
-void Scene::RemoveGameObject(GameObjectBase* obj)
-{
-    _objs.remove(obj);
+    void Scene::Render()
+    {
+        for(GameObjectBase* obj : _objs)
+        {
+            obj->Render();
+        }
+    }
+
+    void Scene::AddGameObject(GameObjectBase* obj)
+    {
+        _objs.push_front(obj);
+    }
+
+    void Scene::RemoveGameObject(GameObjectBase* obj)
+    {
+        _objs.remove(obj);
+    }
+
 }

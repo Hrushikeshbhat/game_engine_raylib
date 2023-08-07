@@ -1,9 +1,13 @@
 #pragma once
-#include "../Engine.h"
+#include "../Core/Engine.h"
 
-class FlappyBird : private GameProgram
-{
-public:
-    FlappyBird(int* width, int* height, const char* title);
-    ~FlappyBird();
-};
+namespace HashEngine {
+
+    class FlappyBird
+    {
+    public:
+        FlappyBird();
+        ~FlappyBird();
+    };
+
+}
