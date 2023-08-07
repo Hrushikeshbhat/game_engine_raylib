@@ -2,5 +2,5 @@
 
 int main()
 {
-    FlappyBird program();
+    FlappyBird program;
 }
