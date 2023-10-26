@@ -11,6 +11,7 @@ namespace HashEngine {
     private:
 
     public:
+        Color color = WHITE;
 
     public:
         Circle(char* name);

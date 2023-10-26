@@ -27,7 +27,7 @@ namespace HashEngine {
         DrawCircle(screenWidth / 2 + ((int)GetTransform()->translation.x * 100), 
         screenHeight / 2 - ((int)GetTransform()->translation.y * 100), 
         GetTransform()->scale.x * 50, 
-        RED);
+        color);
     }
-    
+
 }

@@ -2,12 +2,12 @@
 
 FlappyBird::FlappyBird()
 {
-    int width = 600;
-    int height = 400;
+    int width = 1080;
+    int height = 720;
     GameProgram game(&width, &height, "Flappy Bird");
 
     Scene test("TestScene");
-    Circle testCircle("Test Circle", new Vector2{-1, 1});
+    Circle testCircle("Test Circle", new Vector2{1, 1});
 
     test.AddGameObject(&testCircle);
 
