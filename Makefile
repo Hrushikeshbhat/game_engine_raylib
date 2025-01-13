@@ -8,9 +8,9 @@ EXT = .cpp
 SRCDIR = src
 OBJDIR = obj
 
-INCLUDE_DIRS = $(SRCDIR)/Core/Utils 
-INCLUDE_DIRS += $(SRCDIR)/Core/GameBase 
-INCLUDE_DIRS += $(SRCDIR)/Core/ 
+INCLUDE_DIRS = $(SRCDIR)/Core/Utils
+INCLUDE_DIRS += $(SRCDIR)/Core/GameBase
+INCLUDE_DIRS += $(SRCDIR)/Core/
 INCLUDE_DIRS += $(SRCDIR)/FlappyBird
 
 RAYLIB_PATH        ?= RaylibRepo/src/libraylib.a
@@ -23,7 +23,7 @@ PLATFORM           ?= PLATFORM_DESKTOP
 CC = clang
 CXXFLAGS = -std=c++11 -Wall
 LDFLAGS = 
-LDLIBS = -framework OpenGL -framework OpenAL -framework Cocoa -framework IOKit -framework OpenGL $(RAYLIB_PATH)
+LDLIBS = -framework OpenGL -framework OpenAL -framework Cocoa -framework IOKit $(RAYLIB_PATH)
 STDLIBS = -lstdc++
 
 
