@@ -9,8 +9,6 @@ FlappyBird::FlappyBird()
     Scene test("TestScene");
     Circle testCircle("Test Circle", new Vector2{0, 0});
 
-    testCircle.color = RED;
-
     test.AddGameObject(&testCircle);
 
     game.AddScene(&test);
